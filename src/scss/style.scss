@@ -1,0 +1,55 @@
+// null default styles
+@import "null";
+
+// load fonts
+@import "fonts";
+
+//load variables
+@import "common/variables";
+
+// load mixins
+@import "mixins";
+
+// load swiper
+// @import "../../node_modules/swiper/swiper";
+
+// load common
+@import "common/common";
+
+// load header
+@import "common/header";
+
+// load footer
+@import "common/footer";
+
+// load footer
+@import "common/menu";
+
+// load ticker
+@import "common/ticker";
+
+// load about
+@import "common/article";
+
+
+
+// load side fixed
+// @import "common/side-fixed";
+
+// load error 404
+@import "common/404";
+
+// load home
+@import "parts/home";
+
+// load about
+@import "parts/about";
+
+// load shirts
+@import "parts/shirts";
+
+// load advantages
+@import "parts/advantages";
+
+// load collection
+@import "parts/collection";

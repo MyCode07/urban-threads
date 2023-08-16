@@ -1,0 +1,43 @@
+._ticker {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+
+    max-width: 1920px;
+    width: 100%;
+
+    @media (any-hover: hover) {
+        &:hover {
+            .ticker-text {
+                animation-play-state: paused;
+            }
+        }
+    }
+
+    // ._ticker-text
+
+    &-text {
+        font-style: normal;
+        white-space: nowrap;
+
+        color: #fff;
+        text-align: center;
+        @include adaptive-value('font-size', 14, 12, 1);
+        line-height: 100%;
+        letter-spacing: 1.4px;
+        text-transform: uppercase;
+
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        span{
+            display: block;
+            margin: 0 15px;
+        }
+    }
+}

@@ -1,0 +1,103 @@
+.about {
+    // .about__container
+
+    &__container {
+    }
+
+    // .about__body
+
+    &__body {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+        .welcome {
+            max-width: 930px;
+            width: 100%;
+            @include adaptive-value("font-size", 28, 18, 1);
+            font-weight: 600;
+            line-height: 120%;
+            letter-spacing: 0.84px;
+            text-transform: uppercase;
+            display: block;
+            margin-bottom: 15px;
+
+            label {
+                display: block;
+                text-indent: 312px;
+
+                @media (max-width: 768px) {
+                    text-indent: 0;
+                    display: contents;
+                }
+            }
+
+            @media (max-width: 425px) {
+                text-align: center;
+            }
+        }
+    }
+
+    // .about__content
+
+    &__content {
+        max-width: 307px;
+        width: 100%;
+
+        @media (max-width: 425px) {
+            max-width: 100%;
+            text-align: center;
+        }
+
+        div {
+            position: relative;
+            overflow: hidden;
+            margin: 15px 0;
+
+            &:before {
+                background: linear-gradient(to right, fade_out(#fff, 1) 0%, fade_out(#fff, 0.7) 100%);
+                content: "";
+                display: block;
+                height: 100%;
+                left: -80%;
+                position: absolute;
+                top: 0;
+                transform: skewX(-25deg);
+                width: 50%;
+                z-index: 2;
+            }
+
+            @media (any-hover: hover) {
+                &:hover {
+                    &:before {
+                        animation: shine 0.85s;
+                    }
+                }
+            }
+
+            &:focus {
+                &:before {
+                    animation: shine 0.85s;
+                }
+            }
+
+            @keyframes shine {
+                100% {
+                    left: 125%;
+                }
+            }
+
+            img {
+                width: 100%;
+            }
+        }
+    }
+}
+
+._shop {
+    // ._shop-btn
+
+    &-btn {
+    }
+}
