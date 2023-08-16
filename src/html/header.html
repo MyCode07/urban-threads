@@ -8,21 +8,15 @@
         <div class="header__container _container">
             <div class="header__body">
                 <a href="" class="header__logo">URBANTHREADS</a>
-                <nav class="header__menu">
+                <nav>
                     <ul>
-                        <li class="dropdown">
-                            <a href="#">catalog
-                                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="8" viewBox="0 0 14 8"
-                                    fill="none">
-                                    <path d="M12.8125 1L7.15565 6.65685L1.49879 1" stroke="white" stroke-width="1.5"
-                                        stroke-linecap="square" />
-                                </svg>
-                            </a>
-                            <div>
-                                <a href="#">T-Shirts</a>
-                                <a href="#">Hoodies</a>
-                                <a href="#">Windbreakers</a>
-                            </div>
+                        <li>
+                            <a href="#">Catalog</a>
+                            <ul>
+                                <li><a href="#">T-Shirts</a></li>
+                                <li><a href="#">Hoodies</a></li>
+                                <li><a href="#">Windbreakers</a></li>
+                            </ul>
                         </li>
                         <li>
                             <a href="">About Us</a>
@@ -32,14 +26,26 @@
                         </li>
                     </ul>
                 </nav>
-                <div class="header__navbar">
-                    <img class="header__navbar-search" src="img/icons/search.svg" alt="">
-                    <img class="header__navbar-acc" src="img/icons/acc.svg" alt="">
-                    <img class="header__navbar-basket" src="img/icons/basket.svg" alt="">
+                <div class="header__actions">
+                    <a href="" class="header__search">
+                        <svg>
+                            <use xlink:href="img/svg/icons.svg#search" />
+                        </svg>
+                    </a>
+                    <a href="" class="header__account">
+                        <svg>
+                            <use xlink:href="img/svg/icons.svg#account" />
+                        </svg>
+                    </a>
+                    <a href="" class="header__cart">
+                        <svg>
+                            <use xlink:href="img/svg/icons.svg#cart" />
+                        </svg>
+                    </a>
 
-                    <button class="header__menu-btn">
-                        <span class="header__menu-open">MENU</span>
-                        <span class="header__menu-close">CLOSE</span>
+                    <button class="header__burger">
+                        <span>MENU</span>
+                        <span>CLOSE</span>
                     </button>
                 </div>
             </div>

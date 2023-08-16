@@ -1,6 +1,5 @@
 html {
     scroll-behavior: smooth;
-    font-family: Montserrat;
 }
 
 body {
@@ -10,7 +9,6 @@ body {
     background-color: #000;
     font-family: Montserrat;
     font-style: normal;
-
     position: relative;
 
     &:after {
@@ -22,7 +20,7 @@ body {
         height: 100%;
         z-index: -1;
         opacity: 0.5;
-        background: url("@img/Noise.png");
+        background-image: url("@img/Noise.png");
         background-repeat: no-repeat;
         background-size: cover;
     }
@@ -60,6 +58,18 @@ main {
         max-width: none;
         padding-inline: $padding + px;
     }
+
+    @media (max-width: 1440px) {
+        padding-inline: 30px;
+    }
+
+    @media (max-width: 1024px) {
+        padding-inline: 20px;
+    }
+
+    @media (max-width: 768px) {
+        padding-inline: 10px;
+    }
 }
 
 section {
@@ -71,21 +81,20 @@ h2 {
 }
 
 h1 {
-    @include adaptive-value("font-size", 101, 25, 1);
+    @include adaptive-value("font-size", 100, 26, 1);
     line-height: 100%;
     text-transform: uppercase;
 }
 
 h2 {
     text-align: center;
-    @include adaptive-value('font-size', 68, 20, 1);
+    @include adaptive-value("font-size", 68, 20, 1);
     font-style: normal;
     font-weight: 600;
     line-height: 100%;
     letter-spacing: 2.04px;
     text-transform: uppercase;
-    @include adaptive-value('margin-bottom', 50, 30, 1);
-    
+    @include adaptive-value("margin-bottom", 50, 30, 1);
 }
 
 a {
@@ -116,14 +125,11 @@ p {
     padding: 20px 60px;
     background: #fff;
     height: fit-content;
-
-    span {
-        color: #000;
-        text-align: center;
-        @include adaptive-value("font-size", 16, 14, 1);
-        font-weight: 700;
-        text-transform: uppercase;
-    }
+    color: #000;
+    text-align: center;
+    @include adaptive-value("font-size", 16, 14, 1);
+    font-weight: 700;
+    text-transform: uppercase;
 }
 
 .slider-buttons {

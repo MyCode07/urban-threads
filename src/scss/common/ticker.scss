@@ -21,14 +21,12 @@
     // ._ticker-text
 
     &-text {
+        @include adaptive-value('font-size', 14, 12, 1);
         font-style: normal;
         white-space: nowrap;
-
-        color: #fff;
-        text-align: center;
-        @include adaptive-value('font-size', 14, 12, 1);
-        line-height: 100%;
-        letter-spacing: 1.4px;
+        font-weight: 300;   
+        line-height: 1;
+        letter-spacing: 10%;
         text-transform: uppercase;
 
         display: flex;
