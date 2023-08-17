@@ -30,9 +30,12 @@ body {
     }
 
     &::-webkit-scrollbar {
+        width: 15px;
+        background: #ffffff;
     }
 
     &::-webkit-scrollbar-thumb {
+        background: #000;
     }
 }
 
@@ -125,13 +128,98 @@ p {
     justify-content: center;
     align-items: center;
     padding: 20px 60px;
-    background: #fff;
     height: fit-content;
-    color: #000;
     text-align: center;
     @include adaptive-value("font-size", 16, 14, 1);
     font-weight: 700;
     text-transform: uppercase;
+    color: #000;
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+    transition: all 0.3s ease 0s;
+
+    &:before {
+        position: absolute;
+        content: "";
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background-color: #fff;
+        z-index: -1;
+        transition: all 0.3s ease 0s;
+    }
+
+    &:after {
+        position: absolute;
+        content: "";
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        max-width: 0;
+        z-index: -1;
+        background-color: #000;
+        transition: all 0.3s ease 0s;
+        border: 1px solid #fff;
+    }
+
+    @media (any-hover: hover) {
+        &:hover {
+            color: #fff;
+
+            &:before {
+                left: calc(100% - 20px);
+            }
+
+            &:after {
+                max-width: calc(100% - 20px);
+            }
+        }
+    }
+}
+
+._img-hover {
+    position: relative;
+    overflow: hidden;
+
+    &:before {
+        background: linear-gradient(to right, fade_out(#fff, 1) 0%, fade_out(#fff, 0.7) 100%);
+        content: "";
+        display: block;
+        height: 100%;
+        left: -80%;
+        position: absolute;
+        top: 0;
+        transform: skewX(-25deg);
+        width: 50%;
+        z-index: 2;
+    }
+
+    @media (any-hover: hover) {
+        &:hover {
+            &:before {
+                animation: shine 0.85s;
+            }
+        }
+
+        &:focus {
+            &:before {
+                animation: shine 0.85s;
+            }
+        }
+
+        @keyframes shine {
+            100% {
+                left: 125%;
+            }
+        }
+
+        img {
+            width: 100%;
+        }
+    }
 }
 
 .slider-buttons {

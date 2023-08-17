@@ -1,7 +1,8 @@
 import './utils/menu.js'; 
 import './utils/ticker.js';
 import './utils/replace.js';
-import './utils/sliders.js';
+import './utils/gallery.js';
+// import './utils/sliders.js';
 
 // import './utils/smoothscrol.js';
 // import './utils/animations.js';

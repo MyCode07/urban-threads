@@ -7,66 +7,92 @@
     // .advantages__body
 
     &__body {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        width: 100%;
+    }
 
+    ol {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 10px;
 
-        ol {
-            width: 100%;
+        @media (max-width: 1024px) {
+            grid-template-columns: repeat(2, 1fr);
+        }
 
-            li {
-                position: relative;
-                width: 100%;
-                cursor: pointer;
+        @media (max-width: 600px) {
+            display: block;
+            gap: 0;
 
+            & > :not(:last-child) {
+                margin-bottom: 10px;
+            }
+        }
+
+        & > :nth-child(2n) {
+            img {
+                transform: translate(0, -50%) rotate(-10deg);
+            }
+        }
+
+        & > :first-child {
+            @media (min-width: 1025px) {
+                grid-column-start: 2;
+            }
+        }
+
+        li {
+            position: relative;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            color: rgba($color: #fff, $alpha: 0.3);
+            background-color: transparent;
+            transition: all 0.3s ease 0s;
+            background-color: rgba($color: #fff, $alpha: 0.2);
+
+            height: 250px;
+            padding: 10px;
+
+            @media (max-width: 1024px) {
+                height: 200px;
+            }
+
+            @media (max-width: 600px) {
+                height: 160px;
+            }
+
+            span {
                 text-align: center;
+                @include adaptive-value("font-size", 20, 16, 1);
+                line-height: 130%;
+                text-transform: uppercase;
+            }
 
-                @include adaptive-value("padding-top", 25, 10, 1);
-                @include adaptive-value("padding-bottom", 25, 10, 1);
-
-                border-top: 1px solid rgba(255, 255, 255, 0.25);
-                border-bottom: 1px solid rgba(255, 255, 255, 0.25);
-
-                @media (min-width: 993px) {
-                    opacity: 0.6;
-                    filter: blur(2px);
-                }
+            img {
+                position: absolute;
+                left: 50%;
+                top: 50%;
+                transform: translate(0, -50%) rotate(10deg);
+                opacity: 0;
+                max-width: 285px;
 
                 transition: all 0.3s ease 0s;
+            }
 
-                span {
-                    display: block;
-                    @include adaptive-value("font-size", 20, 12, 1);
-                    font-weight: 400;
-                    letter-spacing: 2px;
-                    text-transform: uppercase;
-                }
+            @media (any-hover: hover) {
+                &:hover {
+                    background-color: #fff;
+                    color: #000;
 
-                img {
-                    position: absolute;
-                    left: 10%;
-                    top: 50%;
-                    transform: translate(-50%, -50%) rotate(-10deg);
-                    @include adaptive-value("width", 381, 280, 1);
-                    @include adaptive-value("height", 381, 280, 1);
-                    opacity: 0;
-
-                    transition: all 0.3s ease 0s;
-                }
-
-                @media (any-hover: hover) {
-                    &:hover {
+                    img {
                         opacity: 1;
-                        filter: blur(0px);
-
-                        img {
-                            opacity: 1;
-                        }
                     }
                 }
             }
+        }
+
+        a {
         }
     }
 }
