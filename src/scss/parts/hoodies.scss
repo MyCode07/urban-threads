@@ -1,0 +1,95 @@
+.hoodies {
+    // .hoodies__container
+
+    &__container {
+    }
+
+    // .hoodies__body
+
+    &__body {
+    }
+
+    // .hoodies__flex
+
+    &__flex {
+        display: flex;
+        justify-content: space-between;
+        // .hoodies__flex-left
+
+        &-left {
+            width: 50%;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-rows: auto;
+            @include adaptive-value("gap", 46, 15, 1);
+
+            article {
+                max-width: 420px;
+                width: 100%;
+                height: fit-content;
+            }
+        }
+
+        // .hoodies__flex-right
+
+        &-right {
+            width: 50%;
+            @include adaptive-value("margin-left", 46, 15, 1);
+
+            height: 100%;
+
+            article {
+                height: 100%;
+
+                img {
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+        }
+    }
+}
+._container {
+}
+._small {
+    // ._small-title
+
+    &-title {
+    }
+}
+.product {
+    // .product__top
+
+    &__top {
+    }
+
+    // .product__sizes
+
+    &__sizes {
+    }
+
+    // .product__bottom
+
+    &__bottom {
+    }
+
+    // .product__info
+
+    &__info {
+    }
+
+    // .product__name
+
+    &__name {
+    }
+
+    // .product__price
+
+    &__price {
+    }
+
+    // .product__addbasket
+
+    &__addbasket {
+    }
+}

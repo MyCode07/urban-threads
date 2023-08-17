@@ -47,6 +47,48 @@
             @include adaptive-value("height", 844, 316, 1);
         }
     }
+
+    ._ticker {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        overflow: hidden;
+        display: flex;
+        align-items: center;
+
+        max-width: 1920px;
+        width: 100%;
+
+        @media (any-hover: hover) {
+            &:hover {
+                .ticker-text {
+                    animation-play-state: paused;
+                }
+            }
+        }
+
+        // ._ticker-text
+
+        &-text {
+            @include adaptive-value("font-size", 14, 12, 1);
+            font-style: normal;
+            white-space: nowrap;
+            font-weight: 300;
+            line-height: 1;
+            letter-spacing: 10%;
+            text-transform: uppercase;
+
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            span {
+                display: block;
+                margin: 0 15px;
+            }
+        }
+    }
 }
 
 .scene {
@@ -77,6 +119,7 @@
         background-repeat: no-repeat;
         background-size: cover;
         animation: k-glow 1.6s ease-in-out infinite;
+        z-index: -1;
     }
 
     // .scene-wrapper
