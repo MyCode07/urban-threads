@@ -30,7 +30,7 @@ if (menuLinks.length) {
 }
 
 
-const arrow = `<button><svg width="14" height="8" viewBox="0 0 14 8"  xmlns="http://www.w3.org/2000/svg">
+const arrow = `<button><svg width="14" height="8" viewBox="0 0 14 8" fill="none"  xmlns="http://www.w3.org/2000/svg">
 <path d="M12.8125 1L7.15565 6.65685L1.49879 1"  stroke-width="1.25" stroke-linecap="square"/>
 </svg>
 </button>

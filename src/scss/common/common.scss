@@ -133,50 +133,42 @@ p {
     @include adaptive-value("font-size", 16, 14, 1);
     font-weight: 700;
     text-transform: uppercase;
-    color: #000;
     position: relative;
     z-index: 1;
     overflow: hidden;
     transition: all 0.3s ease 0s;
+    background: none;
+    border: 1px solid currentColor;
 
-    &:before {
-        position: absolute;
-        content: "";
-        left: 0;
-        top: 0;
-        width: 100%;
-        height: 100%;
-        background-color: #fff;
-        z-index: -1;
-        transition: all 0.3s ease 0s;
+    span {
+        mix-blend-mode: difference;
     }
 
+    &:before,
     &:after {
-        position: absolute;
         content: "";
-        left: 0;
-        top: 0;
-        width: 100%;
-        height: 100%;
-        max-width: 0;
         z-index: -1;
-        background-color: #000;
-        transition: all 0.3s ease 0s;
-        border: 1px solid #fff;
+        width: calc(100% + 50px);
+        height: 100%;
+
+        position: absolute;
+        top: 0;
+        background: white;
+        clip-path: polygon(0 0, calc(100% - 50px) 0, 100% 100%, 0 100%);
+        transition: transform 0.6s;
     }
-
-    @media (any-hover: hover) {
-        &:hover {
-            color: #fff;
-
-            &:before {
-                left: calc(100% - 20px);
-            }
-
-            &:after {
-                max-width: calc(100% - 20px);
-            }
-        }
+    &:before {
+        left: calc(-100% - 50px);
+    }
+    &:after {
+        left: 100%;
+        transform: rotate(180deg);
+    }
+    &:hover:before {
+        transform: translateX(100%);
+    }
+    &:hover:after {
+        transform: rotate(180deg) translateX(100%);
     }
 }
 

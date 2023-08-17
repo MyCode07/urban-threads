@@ -2,6 +2,7 @@ import './utils/menu.js';
 import './utils/ticker.js';
 import './utils/replace.js';
 import './utils/gallery.js';
+import './utils/guide.js';
 // import './utils/sliders.js';
 
 // import './utils/smoothscrol.js';
@@ -12,7 +13,7 @@ import './utils/gallery.js';
 // import './utils/popup.js';
 // import './utils/inputmask.js';
 // import './utils/forms.js';
-// import './utils/accordeon.js';
+import './utils/accordeon.js';
 // import './utils/lazyImages.js';
 
 
