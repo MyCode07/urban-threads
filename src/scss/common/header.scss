@@ -4,6 +4,7 @@
     position: sticky;
     top: 0;
     transition: all 0.2s ease 0s;
+    border-bottom: 1px solid transparent;
 
     &._white {
         color: #fff;
@@ -19,11 +20,11 @@
 
     &._sticky {
         background-color: #fff;
-        border-bottom: 1px solid rgba($color: #000000, $alpha: 0.1);
+        border-color: rgba($color: #000000, $alpha: 0.1);
 
         &._white {
             background-color: #000;
-            border-bottom: 1px solid rgba($color: #fff, $alpha: 0.1);
+            border-color: rgba($color: #fff, $alpha: 0.1);
         }
     }
 

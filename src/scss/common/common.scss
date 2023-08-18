@@ -263,3 +263,43 @@ svg {
         @include adaptive-value("font-size", 16, 12, 1);
     }
 }
+
+.laod-more {
+    &._loading {
+        pointer-events: none;
+    }
+}
+
+.breadcrumb {
+    @include adaptive-value("padding-top", 100, 50, 1);
+    @include adaptive-value("padding-bottom", 100, 15, 1);
+
+    display: flex;
+    align-items: center;
+    width: fit-content;
+ 
+    li {
+        display: flex;
+        align-items: center;
+    }
+
+    a,
+    span {
+        white-space: nowrap;
+        @include adaptive-value("font-size", 18, 14, 1);
+        text-transform: capitalize;
+    }
+
+    span {
+        opacity: 0.7;
+    }
+
+    svg {
+        @include adaptive-value("margin-left", 15, 5, 1);
+        @include adaptive-value("margin-right", 15, 5, 1);
+        transform: rotate(-90deg);
+        fill: none;
+        stroke: #000;
+        width: 10px;
+    }
+}

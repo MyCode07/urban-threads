@@ -99,6 +99,7 @@
 
     &__item {
         min-width: 400px;
+        display: block;
 
         @media (max-width: 1024px) {
             min-width: 0;

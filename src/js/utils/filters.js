@@ -56,7 +56,6 @@ document.addEventListener('click', function (e) {
 
         if (products.length) {
             targetEl.classList.add('_loading');
-console.log(1);
             setTimeout(() => {
                 products.forEach(item => productsGrid.append(item.cloneNode(true)));
                 targetEl.remove();
