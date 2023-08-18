@@ -1,0 +1,125 @@
+@@include('./html/head.html', {
+"title":"Product card",
+})
+@@include('html/header.html')
+
+<main class="catalog">
+
+    <section class="items">
+        <div class="items__container _container">
+            <div class="items__body">
+                <h1>T-SHIRTS</h1>
+                <div class="catalog__filters">
+                    <div class="catalog__filters-item">
+                        <button>
+                            <span>Pricey: </span>
+                            <label> $100 - $200</label>
+                            <svg width="20" height="19" viewBox="0 0 20 19" xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M19.4219 18.8L14.9219 14.3C16.2219 12.8 17.0219 10.9 17.0219 8.8C17.0219 4.2 13.3219 0.5 8.72188 0.5C4.12188 0.5 0.421875 4.2 0.421875 8.8C0.421875 13.4 4.12188 17.1 8.72188 17.1C10.8219 17.1 12.7219 16.3 14.2219 15L18.7219 19.5L19.4219 18.8ZM1.42188 8.8C1.42188 4.8 4.72188 1.5 8.72188 1.5C12.7219 1.5 16.0219 4.8 16.0219 8.8C16.0219 12.8 12.7219 16.1 8.72188 16.1C4.72188 16.1 1.42188 12.8 1.42188 8.8Z" />
+                            </svg>
+                        </button>
+                        <ul>
+                            <li class="_selected">$100 - $200</li>
+                            <li>$200 -$300</li>
+                            <li>$300 -$400</li>
+                        </ul>
+                    </div>
+                    <div class="catalog__filters-item">
+                        <button>
+                            <span>Size: </span>
+                            <label> XS</label>
+                            <svg width="20" height="19" viewBox="0 0 20 19" xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M19.4219 18.8L14.9219 14.3C16.2219 12.8 17.0219 10.9 17.0219 8.8C17.0219 4.2 13.3219 0.5 8.72188 0.5C4.12188 0.5 0.421875 4.2 0.421875 8.8C0.421875 13.4 4.12188 17.1 8.72188 17.1C10.8219 17.1 12.7219 16.3 14.2219 15L18.7219 19.5L19.4219 18.8ZM1.42188 8.8C1.42188 4.8 4.72188 1.5 8.72188 1.5C12.7219 1.5 16.0219 4.8 16.0219 8.8C16.0219 12.8 12.7219 16.1 8.72188 16.1C4.72188 16.1 1.42188 12.8 1.42188 8.8Z" />
+                            </svg>
+                        </button>
+                        <ul>
+                            <li class="_selected">XS</li>
+                            <li>S</li>
+                            <li>M</li>
+                            <li>L</li>
+                            <li>XL</li>
+                        </ul>
+                    </div>
+                    <div class="catalog__filters-item">
+                        <button>
+                            <span>Sort By: </span>
+                            <label> Featured</label>
+                            <svg width="20" height="19" viewBox="0 0 20 19" xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M19.4219 18.8L14.9219 14.3C16.2219 12.8 17.0219 10.9 17.0219 8.8C17.0219 4.2 13.3219 0.5 8.72188 0.5C4.12188 0.5 0.421875 4.2 0.421875 8.8C0.421875 13.4 4.12188 17.1 8.72188 17.1C10.8219 17.1 12.7219 16.3 14.2219 15L18.7219 19.5L19.4219 18.8ZM1.42188 8.8C1.42188 4.8 4.72188 1.5 8.72188 1.5C12.7219 1.5 16.0219 4.8 16.0219 8.8C16.0219 12.8 12.7219 16.1 8.72188 16.1C4.72188 16.1 1.42188 12.8 1.42188 8.8Z" />
+                            </svg>
+                        </button>
+                        <ul>
+                            <li class="_selected">Featured</li>
+                            <li>popular</li>
+                            <li>Price highest</li>
+                            <li>Price lowest</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="items__flex">
+                    <article class="product">
+                        <a href="#" class="product__top">
+                            <ol class="product__sizes">
+                                <li>XS</li>
+                                <li>S</li>
+                                <li>M</li>
+                                <li>L</li>
+                                <li>XL</li>
+                            </ol>
+                            <img src="img/t-shirt-1.png" alt="">
+                        </a>
+                        <div class="product__bottom">
+                            <div class="product__info">
+                                <h3 class="product__name"><a href="">T-shirt</a></h3>
+                                <span class="product__price"> <span>$</span> 500</span>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="product">
+                        <a href="#" class="product__top">
+                            <ol class="product__sizes">
+                                <li>XS</li>
+                                <li>S</li>
+                                <li>M</li>
+                                <li>L</li>
+                                <li>XL</li>
+                            </ol>
+                            <img src="img/t-shirt-2.png" alt="">
+                        </a>
+                        <div class="product__bottom">
+                            <div class="product__info">
+                                <h3 class="product__name"><a href="">T-shirt</a></h3>
+                                <span class="product__price"> <span>$</span> 500</span>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="product">
+                        <a href="#" class="product__top">
+                            <ol class="product__sizes">
+                                <li>XS</li>
+                                <li>S</li>
+                                <li>M</li>
+                                <li>L</li>
+                                <li>XL</li>
+                            </ol>
+                            <img src="img/t-shirt-3.png" alt="">
+                        </a>
+                        <div class="product__bottom">
+                            <div class="product__info">
+                                <h3 class="product__name"><a href="">T-shirt</a></h3>
+                                <span class="product__price"> <span>$</span> 500</span>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </div>
+    </section>
+
+</main>
+
+@@include('html/footer.html')
+@@include('html/scripts.html')

@@ -1,0 +1,58 @@
+.similar {
+    // .similar__container
+
+    &__container {
+    }
+
+    // .similar__body
+
+    &__body {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: auto;
+        gap: 10px;
+
+        article {
+        }
+
+        @media (max-width: 768px) {
+            grid-template-columns: repeat(2, 1fr);
+            
+            & > :last-child {
+                display: none;
+            }
+        }
+    }
+}
+
+.product {
+    // .product__top
+
+    &__top {
+    }
+
+    // .product__sizes
+
+    &__sizes {
+    }
+
+    // .product__bottom
+
+    &__bottom {
+    }
+
+    // .product__info
+
+    &__info {
+    }
+
+    // .product__name
+
+    &__name {
+    }
+
+    // .product__price
+
+    &__price {
+    }
+}

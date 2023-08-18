@@ -64,18 +64,23 @@ form {
 
     &__button {
         @include adaptive-value("margin-top", 50, 30, 1);
-
+        background-color: #000;
         width: 100%;
         text-align: center;
-        padding: 15px;
-        background-color: #000;
 
         button {
             width: 100%;
-            color: #fff;
             @include adaptive-value("font-size", 18, 16, 1);
             font-weight: 700;
             text-transform: uppercase;
+            color: #fff;
+            transition: all 0.3s ease 0s;
+
+            @media (any-hover: hover) {
+                &:hover {
+                    color: #000;
+                }
+            }
         }
     }
 }

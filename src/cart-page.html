@@ -1,0 +1,208 @@
+@@include('./html/head.html', {
+"title":"Product card",
+})
+@@include('html/header.html')
+
+<main class="card-page">
+    <section class="card">
+        <div class="card__container _container">
+            <nav class="breadcrumb">
+                <a href="">Home</a>
+                <svg width="14" height="8" viewBox="0 0 14 8" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M12.8125 1L7.15565 6.65685L1.49879 1" stroke-width="1.25" stroke-linecap="square" />
+                </svg>
+                <a href="">Shop</a>
+                <svg width="14" height="8" viewBox="0 0 14 8" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M12.8125 1L7.15565 6.65685L1.49879 1" stroke-width="1.25" stroke-linecap="square" />
+                </svg>
+
+                <a href="">T-shirt</a>
+            </nav>
+            <div class="card__body">
+                <div class="card__images">
+                    <img src="img/cart-page-1.png" alt="">
+                    <img src="img/cart-page-2.png" alt="">
+                    <img src="img/cart-page-3.png" alt="">
+                    <img src="img/cart-page-4.png" alt="">
+                </div>
+                <div class="card__info">
+                    <div class="card__name">
+                        <div>
+
+                            <h3>T-shirt</h3>
+                            <label><span>$ </span> 500</label>
+                        </div>
+                        <p>Durable armor fabric</p>
+                    </div>
+                    <div class="card__color">
+                        <div>
+                            <h4>Color: </h4>
+                            <label> Black</label>
+                        </div>
+                        <ol>
+                            <li>
+                                <label for="black">
+                                    <input id="black" type="radio" name="color">
+                                    <span></span>
+                                    <img src="img/cart-page-black-color.png" alt="">
+                                </label>
+                            </li>
+                            <li>
+                                <label for="white">
+                                    <input id="white" type="radio" name="color">
+                                    <span></span>
+                                    <img src="img/cart-page-white-color.png" alt="">
+                                </label>
+                            </li>
+                        </ol>
+                    </div>
+                    <div class="card__size">
+                        <div>
+                            <h4>Size</h4>
+                            <a href="guide.html">Size guide</a>
+                        </div>
+                        <ol>
+                            <li>
+                                <label for="L">
+                                    <input id="L" checked type="radio" name="size">
+                                    <span>L</span>
+                                </label>
+                            </li>
+                            <li>
+                                <label for="S">
+                                    <input id="S" type="radio" name="size">
+                                    <span>S</span>
+                                </label>
+                            </li>
+                            <li>
+                                <label for="M">
+                                    <input id="M" type="radio" name="size">
+                                    <span>M</span>
+                                </label>
+                            </li>
+                            <li>
+                                <label for="XS">
+                                    <input id="XS" type="radio" name="size">
+                                    <span>XS</span>
+                                </label>
+                            </li>
+                        </ol>
+                    </div>
+                    <button class="card__add _shop-btn">
+                        <span>Add To card</span>
+                    </button>
+
+                    <div class="card__descr">
+                        <h4>TECHNICAL DETAILS</h4>
+                        <ol>
+                            <li><span>High stretch fabric -</span>
+                                <span>20% elastane / 80% polyamide</span>
+                            </li>
+                            <li>
+                                <span>Active stitching technology</span>
+                            </li>
+                            <li><span>Lightweight -</span>
+                                <span>180g</span>
+                            </li>
+                            <li><span>Breathable</span>
+                            </li>
+                            <li><span>microfiber strands</span>
+                            </li>
+                            <li><span>Cool wash max temp 40°C</span>
+                            </li>
+                            <li><span>Do not tumble dry</span>
+                            </li>
+                            <li><span>High wicking</span>
+                            </li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="fabric">
+        <img src="img/fabric.png" alt="">
+        <div class="fabric__container _container">
+            <div class="fabric__body">
+                <div class="fabric__content">
+                    <h3>
+                        DURABLE ARMOR FABRIC
+                    </h3>
+                    <p>Introducing our Durable Armor Fabric, a cutting-edge textile innovation designed to provide
+                        exceptional protection and
+                        longevity. This fabric is composed of an intricate network of thousands of microfiber strands
+                        tightly woven together,
+                        creating a robust honeycomb structure. While the fabric feels smooth and comfortable, its
+                        remarkable durability rivals
+                        that of diamonds, ensuring outstanding resistance to abrasion.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="similar">
+        <div class="similar__container _container">
+            <div class="similar__body">
+                <article class="product">
+                    <a href="#" class="product__top">
+                        <ol class="product__sizes">
+                            <li>XS</li>
+                            <li>S</li>
+                            <li>M</li>
+                            <li>L</li>
+                            <li>XL</li>
+                        </ol>
+                        <img src="img/t-shirt-1.png" alt="">
+                    </a>
+                    <div class="product__bottom">
+                        <div class="product__info">
+                            <h3 class="product__name"><a href="">T-shirt</a></h3>
+                            <span class="product__price"> <span>$</span> 500</span>
+                        </div>
+                    </div>
+                </article>
+                <article class="product">
+                    <a href="#" class="product__top">
+                        <ol class="product__sizes">
+                            <li>XS</li>
+                            <li>S</li>
+                            <li>M</li>
+                            <li>L</li>
+                            <li>XL</li>
+                        </ol>
+                        <img src="img/t-shirt-2.png" alt="">
+                    </a>
+                    <div class="product__bottom">
+                        <div class="product__info">
+                            <h3 class="product__name"><a href="">T-shirt</a></h3>
+                            <span class="product__price"> <span>$</span> 500</span>
+                        </div>
+                    </div>
+                </article>
+                <article class="product">
+                    <a href="#" class="product__top">
+                        <ol class="product__sizes">
+                            <li>XS</li>
+                            <li>S</li>
+                            <li>M</li>
+                            <li>L</li>
+                            <li>XL</li>
+                        </ol>
+                        <img src="img/t-shirt-3.png" alt="">
+                    </a>
+                    <div class="product__bottom">
+                        <div class="product__info">
+                            <h3 class="product__name"><a href="">T-shirt</a></h3>
+                            <span class="product__price"> <span>$</span> 500</span>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+</main>
+
+@@include('html/footer.html')
+@@include('html/scripts.html')

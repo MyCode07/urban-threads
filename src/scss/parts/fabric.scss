@@ -1,0 +1,48 @@
+.fabric {
+    img {
+        object-fit: cover;
+    }
+    // .fabric__container
+
+    &__container {
+    }
+
+    // .fabric__body
+
+    &__body {
+        position: relative;
+    }
+
+    // .fabric__content
+
+    &__content {
+        position: absolute;
+        bottom: 0;
+        left: -50px;
+        color: #000;
+
+        background-color: #fff;
+        max-width: 600px;
+        width: 100%;
+        @include adaptive-value("padding-top", 30, 20, 1);
+        @include adaptive-value("padding-bottom", 30, 20, 1);
+        @include adaptive-value("padding-left", 50, 15, 1);
+        @include adaptive-value("padding-right", 50, 15, 1);
+
+        @media (max-width: 1440px) {
+            left: -30px;
+        }
+
+        @media (max-width: 1024px) {
+            position: relative;
+            left: 0;
+            margin-inline: auto;
+            @include adaptive-value("margin-top", 50, 30, 1);
+        }
+
+        h3 {
+            @include adaptive-value("font-size", 28, 18, 1);
+            margin-bottom: 20px;
+        }
+    }
+}

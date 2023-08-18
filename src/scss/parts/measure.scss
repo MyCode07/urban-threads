@@ -40,6 +40,14 @@
             height: 30px;
             color: #fff;
             margin-bottom: 15px;
+
+            transition: all 0.3s ease 0s;
+
+            @media (any-hover: hover) {
+                &:hover {
+                    transform: scale(1.1);
+                }
+            }
         }
         // .measure__info-content
 
@@ -58,7 +66,7 @@
             visibility: hidden;
             margin: 0 10px;
             height: 0;
-            
+
             h3 {
                 @include adaptive-value("font-size", 32, 18, 1);
                 text-transform: uppercase;
