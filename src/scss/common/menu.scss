@@ -1,21 +1,21 @@
 .menu {
     position: fixed;
     width: 100%;
-    height: 100%;
     right: 0;
-    left: 0;
-    top: 0;
-    z-index: 15;
 
-    @include adaptive-value("padding-top", 150, 100, 1);
+    height: calc(100% - calc(78px + 22 * ((100vw - 375px) / 1545)));
+    @include adaptive-value("top", 100, 78, 1);
 
+    z-index: 16;
     overflow: hidden;
     background-color: #111111;
     clip-path: circle(0 at 100% 0);
     transition: all 0.5s ease 0s;
 
     &._open {
-        clip-path: circle(150% at 100% 0);
+        @media (max-width: 1024px) {
+            clip-path: circle(150% at 100% 0);
+        }
     }
 
     // .menu__container
@@ -29,9 +29,8 @@
     &__body {
         display: flex;
         flex-direction: column;
-        align-items: center;
-        justify-content: space-between;
         padding-bottom: 50px;
+        padding-top: 30px;
         height: 100%;
 
         img,
@@ -39,45 +38,20 @@
             height: 18px;
             width: fit-content;
         }
-
-        nav {
-            ul {
-                & > :not(:last-child) {
-                    @include adaptive-value("margin-bottom", 40, 15, 1);
-                }
-                li {
-                    transition: all 0.5s ease 0s;
-
-                    a {
-                        text-align: center;
-                        @include adaptive-value("font-size", 44, 22, 1);
-                        font-weight: 100;
-                        letter-spacing: 1.1px;
-                        text-transform: capitalize;
-                        position: relative;
-                    }
-                }
-            }
-        }
-    }
-
-    // .menu__top
-
-    &__top {
-        max-width: 500px;
-        width: 100%;
-        margin-inline: auto;
-        @include adaptive-value("margin-bottom", 150, 50, 1);
     }
 
     // .menu__search
 
     &__search {
         display: flex;
+        flex-direction: row;
         align-items: center;
         justify-content: space-between;
-        border-bottom: 1px solid #fff;
+        border-bottom: 1px solid rgba($color: #fff, $alpha: 0.3);
         padding-bottom: 10px;
+        width: 100%;
+        margin-bottom: 50px;
+        margin-top: 0;
 
         input {
             font-size: 12px;
@@ -87,7 +61,36 @@
             text-transform: initial;
         }
 
-        img {
+        button {
+            svg {
+                pointer-events: none;
+                width: 1em;
+                height: 1em;
+                fill: #fff;
+            }
+        }
+    }
+
+    nav {
+        color: #fff;
+        flex: 1 1 auto;
+
+        ul {
+            & > :not(:last-child) {
+                @include adaptive-value("margin-bottom", 40, 15, 1);
+            }
+            li {
+                transition: all 0.5s ease 0s;
+
+                a {
+                    text-align: center;
+                    @include adaptive-value("font-size", 44, 22, 1);
+                    font-weight: 100;
+                    letter-spacing: 1.1px;
+                    text-transform: capitalize;
+                    position: relative;
+                }
+            }
         }
     }
 

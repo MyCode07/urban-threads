@@ -1,5 +1,31 @@
 .header {
     z-index: 15;
+    color: #000;
+    position: sticky;
+    top: 0;
+    transition: all 0.2s ease 0s;
+
+    &._white {
+        color: #fff;
+
+        .header__top span {
+            color: #000;
+        }
+
+        nav ul ul li {
+            color: #000;
+        }
+    }
+
+    &._sticky {
+        background-color: #fff;
+        border-bottom: 1px solid rgba($color: #000000, $alpha: 0.1);
+
+        &._white {
+            background-color: #000;
+            border-bottom: 1px solid rgba($color: #fff, $alpha: 0.1);
+        }
+    }
 
     // .header__container
 
@@ -19,13 +45,13 @@
 
     &__top {
         padding: 5px 0;
-        background: #fff;
+        background-color: currentColor;
 
         span {
             display: block;
             width: 100%;
+            color: #fff;
             text-align: center;
-            color: #000;
             text-align: center;
             font-size: 12px;
             font-weight: 400;
@@ -118,10 +144,10 @@
                 }
 
                 ul {
+                    color: inherit;
                     display: block;
                     border-radius: 10px;
-                    background-color: #fff;
-                    color: #000;
+                    background-color: currentColor;
                     box-shadow: 0px 0px 2px 1px rgba(0, 0, 0, 0.1);
                     padding: 1em;
                     min-width: 186px;
@@ -134,6 +160,15 @@
                     opacity: 0;
                     pointer-events: none;
                     visibility: hidden;
+
+                    li {
+                        color: #fff;
+                        @media (any-hover: hover) {
+                            &:hover {
+                                text-decoration: underline;
+                            }
+                        }
+                    }
 
                     & > :not(:last-child) {
                         margin-right: 0;
@@ -163,7 +198,7 @@
             transition: all 0.3s ease 0s;
             height: 18px;
             width: 18px;
-            fill: #fff;
+            fill: currentColor;
 
             @media (any-hover: hover) {
                 &:hover {
@@ -204,16 +239,16 @@
         width: 53px;
         height: 18px;
         overflow: hidden;
-
         background-color: transparent;
-        border: 1px solid #fff;
-        color: #fff;
+        border: 1px solid currentColor;
+        color: currentColor;
         font-size: 12px;
         font-weight: 500;
         text-align: center;
         text-transform: uppercase;
         transition: all 0.3s ease 0s;
         line-height: 1;
+        z-index: 16;
 
         @media (max-width: 1024px) {
             display: block;

@@ -25,6 +25,9 @@
 // load footer
 @import "common/menu";
 
+// load to top
+@import "common/to-top";
+
 // load ticker
 @import "common/ticker";
 
@@ -70,7 +73,6 @@
 // load trend
 @import "parts/trend";
 
-
 // load cards
 @import "parts/cards";
 
@@ -91,3 +93,7 @@
 
 // load similar
 @import "parts/similar";
+
+// load catalog
+@import "parts/catalog";
+

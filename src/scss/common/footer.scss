@@ -87,9 +87,12 @@
             li {
                 a {
                     display: block;
-                    img {
-                        width: unset;
-                        max-width: unset;
+
+                    img,
+                    svg {
+                        width: 16px;
+                        height: 16px;
+                        fill: #666666;
                     }
                 }
             }

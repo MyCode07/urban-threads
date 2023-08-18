@@ -76,6 +76,10 @@ form {
             color: #fff;
             transition: all 0.3s ease 0s;
 
+            @media (max-width: 768px) {
+                font-weight: 500;
+            }
+
             @media (any-hover: hover) {
                 &:hover {
                     color: #000;

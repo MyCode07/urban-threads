@@ -17,7 +17,7 @@
 
         @media (max-width: 768px) {
             grid-template-columns: repeat(2, 1fr);
-            
+
             & > :last-child {
                 display: none;
             }
@@ -26,9 +26,11 @@
 }
 
 .product {
+   
     // .product__top
 
     &__top {
+       
     }
 
     // .product__sizes
