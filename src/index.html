@@ -1,10 +1,12 @@
 @@include('./html/head.html', {
 "title":"Главная",
+"body-class":"_dark",
 })
 
 @@include('./html/header.html')
 
 <main>
+
     <section class="home">
         <img class="light" src="img/scene/light.png" alt="">
         <div class="home__container _container">
@@ -486,84 +488,88 @@
         </div>
     </section>
 
-    <section class="trend">
-        <div class="trend__container _container">
-            <div class="trend__body">
+    <section class="trends">
+        <div class="trends__container _container">
+            <div class="trends__body">
                 <label class="_small-title ">/Trends</label>
                 <h2>LATEST IN TRENDS</h2>
 
-                <div class="trend__flex">
-                    <div class="trend__flex-left">
-                        <article>
-                            <a href="">
-                                <img src="img/trends-1.png" alt="">
-                            </a>
-                            <div class="trend__flex-info">
-                                <a href="#" class="trend__discover">
-                                    <span>discover more</span>
+                <div class="trends__grid">
+                    <article class="trend">
+                        <a href="" class="trend-img">
+                            <img src="img/trends-1.png" alt="">
+                        </a>
+                        <div class="trend-info">
+                            <a href="#" class="more">discover more</a>
+                            <h3><a href="">UrbanThreads clothing combines comfort and style, making it perfect for
+                                    any occasion.</a></h3>
+                            <div>
+                                <span>Friday 12 May 2023 13:17</span>
+                                <a href="" class="share">
+                                    <svg>
+                                        <use xlink:href='img/svg/icons.svg#share' />
+                                    </svg>
                                 </a>
-                                <h3>UrbanThreads clothing combines comfort and style, making it perfect for any
-                                    occasion.
-                                </h3>
-                                <div class="trend__flex-data"><span>Friday 12 May 2023 13:17</span> <button><img
-                                            src="img/icons/share.svg" alt=""></button>
-                                </div>
                             </div>
-                        </article>
-                    </div>
-                    <div class="trend__flex-right">
-                        <article>
-                            <a href="">
-                                <img src="img/trends-2.png" alt="">
-                            </a>
-                            <div class="trend__flex-info">
-                                <a href="#" class="trend__discover">
-                                    <span>discover more</span>
+                        </div>
+                    </article>
+                    <article class="trend">
+                        <a href="" class="trend-img">
+                            <img src="img/trends-2.png" alt="">
+                        </a>
+                        <div class="trend-info">
+                            <a href="#" class="more">discover more</a>
+                            <h3><a href="">Summer styles</a></h3>
+                            <div>
+                                <span>Friday 12 May 2023 13:17</span>
+                                <a href="" class="share">
+                                    <svg>
+                                        <use xlink:href='img/svg/icons.svg#share' />
+                                    </svg>
                                 </a>
-                                <h3>Summer styles
-                                </h3>
-                                <div class="trend__flex-data"><span>Friday 12 May 2023 13:17</span> <button><img
-                                            src="img/icons/share.svg" alt=""></button>
-                                </div>
                             </div>
-                        </article>
-                        <article>
-                            <a href="">
-                                <img src="img/trends-3.png" alt="">
-                            </a>
-                            <div class="trend__flex-info">
-                                <a href="#" class="trend__discover">
-                                    <span>discover more</span>
+                        </div>
+                    </article>
+                    <article class="trend">
+                        <a href="" class="trend-img">
+                            <img src="img/trends-3.png" alt="">
+                        </a>
+                        <div class="trend-info">
+                            <a href="#" class="more">discover more</a>
+                            <h3><a href="">Contemporary overshirts</a></h3>
+                            <div>
+                                <span>Friday 12 May 2023 13:17</span>
+                                <a href="" class="share">
+                                    <svg>
+                                        <use xlink:href='img/svg/icons.svg#share' />
+                                    </svg>
                                 </a>
-                                <h3>Contemporary overshirts
-                                </h3>
-                                <div class="trend__flex-data"><span>Friday 12 May 2023 13:17</span> <button><img
-                                            src="img/icons/share.svg" alt=""></button>
-                                </div>
                             </div>
-                        </article>
-                        <article>
-                            <a href="">
-                                <img src="img/trends-4.png" alt="">
-                            </a>
-                            <div class="trend__flex-info">
-                                <a href="#" class="trend__discover">
-                                    <span>discover more</span>
+                        </div>
+                    </article>
+                    <article class="trend">
+                        <a href="" class="trend-img">
+                            <img src="img/trends-4.png" alt="">
+                        </a>
+                        <div class="trend-info">
+                            <a href="#" class="more">discover more</a>
+                            <h3><a href="">Unique t-shirts designed by artists</a></h3>
+                            <div>
+                                <span>Friday 12 May 2023 13:17</span>
+                                <a href="" class="share">
+                                    <svg>
+                                        <use xlink:href='img/svg/icons.svg#share' />
+                                    </svg>
                                 </a>
-                                <h3>Unique t-shirts designed by artists
-                                </h3>
-                                <div class="trend__flex-data"><span>Friday 12 May 2023 13:17</span> <button><img
-                                            src="img/icons/share.svg" alt=""></button>
-                                </div>
                             </div>
-                        </article>
-                    </div>
+                        </div>
+                    </article>
                 </div>
             </div>
         </div>
     </section>
+
 </main>
 
 @@include('./html/footer.html')
-
 @@include('./html/scripts.html')

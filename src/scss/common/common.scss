@@ -5,11 +5,16 @@ html {
 body {
     scroll-behavior: smooth;
     line-height: 1.2;
-    color: #fff;
-    background-color: #000;
+    color: #000;
+    background-color: #fff;
     font-family: Montserrat;
     font-style: normal;
     position: relative;
+
+    &._dark {
+        background-color: #000;
+        color:#fff;
+    }
 
     &:after {
         position: absolute;

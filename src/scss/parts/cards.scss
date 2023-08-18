@@ -101,3 +101,85 @@
         @include adaptive-value("height", 16, 10, 1);
     }
 }
+
+.trend {
+    padding: 10px;
+    display: flex;
+
+    // .trend-img
+
+    &-img {
+        position: relative;
+        padding-bottom: 17%;
+        flex: 0 0 auto;
+        width: 200px;
+
+        @media (max-width: 1024px) {
+            width: 150px;
+        }
+
+        img {
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+
+    // .trend-info
+
+    &-info {
+        flex: 1 1 auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        height: 100%;
+
+        @include adaptive-value("margin-left", 25, 10, 1);
+
+        h3 {
+            margin-bottom: 15px;
+            font-weight: 700;
+            @include adaptive-value("font-size", 22, 18, 1);
+        }
+
+        div {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            span {
+                font-size: 14px;
+                color: rgba($color: #fff, $alpha: 0.5);
+            }
+
+            svg {
+                width: 20px;
+                height: 20px;
+                fill: #fff;
+
+                @media (max-width: 768px) {
+                    width: 16px;
+                    height: 16px;
+                }
+            }
+        }
+    }
+
+    .more {
+        font-size: 12px;
+        text-transform: uppercase;
+
+        border: 1px solid rgba($color: #fff, $alpha: 0.5);
+        padding: 6px 10px 5px 10px;
+        white-space: nowrap;
+        width: fit-content;
+        line-height: 1;
+        margin-bottom: 15px;
+    }
+
+    .share {
+    }
+}
