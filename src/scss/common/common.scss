@@ -275,9 +275,10 @@ svg {
     @include adaptive-value("padding-top", 100, 50, 1);
     @include adaptive-value("padding-bottom", 100, 15, 1);
 
-    display: flex;
-    align-items: center;
-    width: fit-content;
+    ul {
+        display: flex;
+        align-items: center;
+    }
 
     li {
         display: flex;
@@ -302,5 +303,12 @@ svg {
         fill: none;
         stroke: #100c08;
         width: 10px;
+    }
+}
+
+.add-to-cart {
+    svg,
+    img {
+        pointer-events: none;
     }
 }

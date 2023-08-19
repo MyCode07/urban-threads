@@ -8,8 +8,7 @@ import './utils/header.js';
 import './utils/to-top.js';
 import './utils/filters.js';
 import './utils/advantages.js';
-import './utils/acc.js';
-import './utils/header-search.js';
+import './utils/header-actions.js';
 
 // import './utils/popup.js';
 

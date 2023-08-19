@@ -1,4 +1,4 @@
-.acc {
+.popup-account {
     position: fixed;
     top: 0%;
     width: 100%;
@@ -10,17 +10,20 @@
     opacity: 0;
     pointer-events: none;
     visibility: hidden;
-    transform: scale(0);
 
     &._open {
-        transform: scale(1);
         opacity: 1;
         visibility: visible;
         pointer-events: all;
+
+        .popup-account__content {
+            transform: translate3d(0, 0, 0) rotateX(0deg);
+        }
     }
 
-    // .acc-close
-    &-close {
+    // .popup-account__close
+
+    &__close {
         @include adaptive-value("margin-bottom", 50, 30, 1);
         border: 1px solid rgba($color: #100c08, $alpha: 0.9);
         padding: 2px 15px;
@@ -36,27 +39,45 @@
         }
     }
 
-    // .acc__body
+    // .popup-account__body
 
     &__body {
+        perspective: 600px;
+        height: 100%;
+        max-width: 600px;
+        margin-inline: auto;
+
+        overflow-y: auto;
+
+        &::-webkit-scrollbar {
+            display: none;
+        }
+    }
+
+    // .popup-account__content
+
+    &__content {
         display: flex;
         flex-direction: column;
         align-items: center;
         padding: 2em;
         position: relative;
-        margin-inline: auto;
-        max-width: 600px;
         width: 100%;
-        height: 100%;
+        min-height: 100%;
         background-color: #fff;
         color: #100c08;
+
+        transform-style: preserve-3d;
+
+        transform: translate3d(0, -15%, -250px) rotateX(15deg);
+        transition: all 0.5s ease 0s;
 
         @media (max-width: 1024px) {
             padding: 1em;
         }
     }
 
-    // .acc__title
+    // .popup-account__title
 
     &__title {
         display: flex;
@@ -77,7 +98,7 @@
         }
     }
 
-    // .acc__forgot
+    // .popup-account__forgot
 
     &__forgot {
         width: fit-content;

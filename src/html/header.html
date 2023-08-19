@@ -27,14 +27,28 @@
                     </ul>
                 </nav>
                 <div class="header__actions">
-                    <form class="header__search">
-                        <input type="search" placeholder="Search">
-                        <button>
+                    <div class="header__search-form">
+                        <button class="header__search-close">
                             <svg>
-                                <use xlink:href="img/svg/icons.svg#search"></use>
+                                <use xlink:href="img/svg/icons.svg#close"></use>
                             </svg>
                         </button>
-                    </form>
+                        <form action="#">
+                            <input type="search" placeholder="Search">
+                            <button type="submit">
+                                <svg>
+                                    <use xlink:href="img/svg/icons.svg#search"></use>
+                                </svg>
+                            </button>
+                        </form>
+                    </div>
+
+                    <button class="header__search">
+                        <svg>
+                            <use xlink:href="img/svg/icons.svg#search"></use>
+                        </svg>
+                    </button>
+
                     <a href="" class="header__account">
                         <svg>
                             <use xlink:href="img/svg/icons.svg#account" />
@@ -44,6 +58,7 @@
                         <svg>
                             <use xlink:href="img/svg/icons.svg#cart" />
                         </svg>
+                        <span class="count" data-count="0"></span>
                     </a>
 
                     <button class="header__burger">
