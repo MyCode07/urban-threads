@@ -2,7 +2,7 @@
     @include adaptive-value("padding-top", 50, 25, 1);
 
     background-color: #fff;
-    color: #000;
+    color: #100c08;
 
     // .footer__container
 
@@ -22,7 +22,7 @@
             @media (any-hover: hover) {
                 &:hover {
                     text-decoration: underline;
-                    color: #000;
+                    color: #100c08;
                 }
             }
         }
@@ -179,7 +179,7 @@
             @include adaptive-value("font-size", 14, 12, 1);
 
             &::placeholder {
-                color: #000;
+                color: #100c08;
                 opacity: 0.6;
                 @include adaptive-value("font-size", 14, 12, 1);
 
@@ -216,7 +216,7 @@
             &:checked + span {
                 background-image: url("@img/icons/check.svg");
                 background-position: center;
-                background-color: #000000;
+                background-color: #100c08100c08;
             }
         }
 
@@ -234,7 +234,7 @@
     height: 12px;
     margin-right: 10px;
     flex: 0 0 auto;
-    border: 1px solid #00000086;
+    border: 1px solid #100c08100c0886;
     background-size: 70%;
     background-repeat: no-repeat;
     background-position: center;

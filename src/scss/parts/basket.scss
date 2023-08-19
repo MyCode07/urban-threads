@@ -1,7 +1,7 @@
 .payment {
     h3 {
-        @include adaptive-value("font-size", 22, 20, 1);
-        font-weight: 400;
+        @include adaptive-value("font-size", 22, 18, 1);
+        font-weight: 500;
         white-space: nowrap;
     }
     // .payment__container
@@ -41,7 +41,7 @@
 
     &__data {
         @include adaptive-value("padding-right", 80, 0, 1);
-        border-right: 1px solid rgba($color: #000000, $alpha: 0.1);
+        border-right: 1px solid rgba($color: #100c08, $alpha: 0.1);
         width: 100%;
         max-width: 520px;
 
@@ -60,11 +60,11 @@
 
             &::-webkit-scrollbar {
                 width: 4px;
-                background-color: rgba($color: #000000, $alpha: 0.1);
+                background-color: rgba($color: #100c08, $alpha: 0.1);
             }
 
             &::-webkit-scrollbar-thumb {
-                background-color: #000;
+                background-color: #100c08;
             }
 
             & > :not(:last-child) {
@@ -77,7 +77,7 @@
 .item {
     display: flex;
     padding-bottom: 15px;
-    border-bottom: 1px solid rgba($color: #000000, $alpha: 0.1);
+    border-bottom: 1px solid rgba($color: #100c08, $alpha: 0.1);
 
     // .item__img
 
@@ -87,18 +87,32 @@
         margin-right: 20px;
         position: relative;
 
+        @media (max-width: 992px) {
+            flex: 0 0 70px;
+            margin-right: 10px;
+        }
+
         span {
             position: absolute;
             left: 0;
             top: 0;
             width: 20px;
             height: 20px;
+
             display: flex;
             align-items: center;
             justify-content: center;
+
             font-size: 14px;
             color: #fff;
-            background-color: #000;
+            background-color: #100c08;
+
+            @media (max-width: 992px) {
+                width: 15px;
+                height: 15px;
+
+                font-size: 12px;
+            }
         }
 
         img {
@@ -115,8 +129,12 @@
 
         span,
         label {
-            @include adaptive-value("font-size", 16, 14, 1);
+            @include adaptive-value("font-size", 16, 12, 1);
             font-weight: 400;
+        }
+
+        span {
+            font-weight: 500;
         }
 
         // .item__info-top
@@ -153,9 +171,12 @@
     // .item__data
 
     &__data {
+        background-color: rgba($color: #b1b1b1, $alpha: 0.1);
+        padding: 1em;
+
         & > :not(:last-child) {
             margin-bottom: 20px;
-            border-bottom: 1px solid rgba($color: #000000, $alpha: 0.1);
+            border-bottom: 1px solid rgba($color: #100c08, $alpha: 0.1);
             padding-bottom: 15px;
         }
 
@@ -168,7 +189,7 @@
             align-items: center;
             justify-content: space-between;
 
-            color: #000;
+            color: #100c08;
             @include adaptive-value("font-size", 16, 14, 1);
             font-weight: 400;
         }
@@ -193,9 +214,9 @@
     // .quantity-button
 
     &-button {
-        width: 30px;
-        height: 30px;
-        border: 1px solid rgba($color: #000000, $alpha: 0.1);
+        @include adaptive-value("width", 30, 25, 1);
+        @include adaptive-value("height", 30, 25, 1);
+        border: 1px solid rgba($color: #100c08, $alpha: 0.1);
     }
 
     // .quantity-text
@@ -207,7 +228,7 @@
 }
 
 .discount {
-    border-bottom: 1px solid rgba($color: #000000, $alpha: 0.1);
+    border-bottom: 1px solid rgba($color: #100c08, $alpha: 0.1);
     padding-bottom: 10px;
 
     @include adaptive-value("margin-bottom", 100, 30, 1);
@@ -217,7 +238,7 @@
     justify-content: space-between;
 
     input {
-        color: #000;
+        color: #100c08;
         font-size: 14px;
     }
 
@@ -272,6 +293,21 @@
         // .form-button
 
         &-button {
+            ._shop-btn {
+                background-color: #100c08;
+                color: #fff;
+
+                &:after,
+                &:before {
+                    background-color: #fff;
+                }
+
+                @media (any-hover: hover) {
+                    &:hover {
+                        color: #100c08;
+                    }
+                }
+            }
         }
 
         // .form-checkbox
@@ -292,7 +328,7 @@
                 &:checked + span {
                     background-image: url("@img/icons/check.svg");
                     background-position: center;
-                    background-color: #000000;
+                    background-color: #100c08;
                 }
             }
 
@@ -313,13 +349,14 @@
                 width: 5px;
             }
             padding-bottom: 10px;
-            border-bottom: 1px solid rgba(0, 0, 0, 0.5);
+            border-bottom: 1px solid rgba(0, 0, 0, 0.1);
 
             input {
                 text-transform: capitalize;
+                @include adaptive-value("font-size", 16, 12, 1);
 
                 &::placeholder {
-                    color: #000;
+                    color: #100c08;
                     font-weight: 500;
                 }
             }
@@ -363,10 +400,10 @@
     height: 12px;
     margin-right: 10px;
     flex: 0 0 auto;
-    border: 1px solid #00000086;
     background-size: 70%;
     background-repeat: no-repeat;
     background-position: center;
+    border: 1px solid #100c08;
 }
 
 .continue-shipping {
@@ -375,9 +412,26 @@
     margin-inline: auto;
     white-space: nowrap;
 
+    &:after,
+    &:before {
+        background-color: #100c08;
+    }
+
+    @media (any-hover: hover) {
+        &:hover {
+            color: #fff;
+
+            svg {
+                stroke: #fff;
+            }
+        }
+    }
+
     svg {
         transform: rotate(90deg);
         width: fit-content;
         margin-right: 5px;
+        position: relative;
+        top: -1px;
     }
 }

@@ -1,6 +1,6 @@
 .card {
     background-color: #fff;
-    color: #000;
+    color: #100c08;
 
     h4 {
         @include adaptive-value("font-size", 18, 16, 1);
@@ -44,7 +44,7 @@
             }
 
             &::-webkit-scrollbar-thumb {
-                background: #000;
+                background: #100c08;
             }
         }
 
@@ -141,7 +141,7 @@
                     visibility: hidden;
 
                     &:checked + span {
-                        background-color: #000000;
+                        background-color: #100c08100c08;
                     }
                 }
 
@@ -154,7 +154,7 @@
                     width: 10px;
                     height: 10px;
                     flex: 0 0 auto;
-                    border: 1px solid #000;
+                    border: 1px solid #100c08;
                 }
 
                 img {
@@ -176,7 +176,7 @@
             a {
                 @include adaptive-value("font-size", 16, 14, 1);
                 font-weight: 400;
-                border-bottom: 1px solid #000;
+                border-bottom: 1px solid #100c08;
             }
         }
 
@@ -194,7 +194,7 @@
                 width: 28px;
                 height: 28px;
 
-                border: 1px solid #000;
+                border: 1px solid #100c08;
                 text-align: center;
                 @include adaptive-value("font-size", 16, 14, 1);
 
@@ -210,7 +210,7 @@
                     visibility: hidden;
 
                     &:checked + span {
-                        background-color: #000000;
+                        background-color: #100c08;
                         color: #fff;
                     }
                 }
@@ -237,7 +237,7 @@
     // .card__add
 
     &__add {
-        background-color: #000;
+        background-color: #100c08;
         color: #fff;
 
         @media (max-width: 1929px) {
@@ -266,8 +266,9 @@
                 font-weight: 300;
                 padding-bottom: 10px;
                 padding-top: 10px;
-                border-bottom: 1px solid rgba($color: #000000, $alpha: 0.1);
+                border-bottom: 1px solid rgba($color: #100c08, $alpha: 0.1);
             }
         }
     }
 }
+ 

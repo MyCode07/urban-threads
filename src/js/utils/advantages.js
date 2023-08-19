@@ -2,7 +2,7 @@ import { gsap } from "gsap";
 import { isMobile } from "./isMobile.js";
 
 if (!isMobile.any()) {
-    const advantagesList = document.querySelectorAll('.advantages ol li');
+    const advantagesList = document.querySelectorAll('.js-hover');
 
     if (advantagesList.length) {
 

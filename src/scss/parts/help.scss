@@ -45,7 +45,7 @@
         // .form__item
 
         &__item {
-            border-bottom: 1px solid #000;
+            border-bottom: 1px solid #100c08;
             padding-bottom: 10px;
 
             input {
@@ -63,7 +63,7 @@
 
         &__button {
             @include adaptive-value("margin-top", 50, 30, 1);
-            background-color: #000;
+            background-color: #100c08;
             width: 100%;
             text-align: center;
 
@@ -81,7 +81,7 @@
 
                 @media (any-hover: hover) {
                     &:hover {
-                        color: #000;
+                        color: #100c08;
                     }
                 }
             }
