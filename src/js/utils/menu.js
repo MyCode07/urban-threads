@@ -93,12 +93,3 @@ document.addEventListener('click', function (e) {
         document.body.classList.remove('_noscroll');
     }
 })
-
-
-const h2Titles = document.querySelectorAll('h2');
-if (h2Titles.length) {
-    h2Titles.forEach(h2 => {
-        const text = h2.textContent.toLocaleLowerCase();
-        h2.id = text.replace(/\n\s+/gi, ' ')
-    })
-}
