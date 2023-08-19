@@ -11,13 +11,17 @@
 
     <section class="home">
         <img class="light" src="img/scene/light.png" alt="">
+        <!-- <video  class="background-video"  autoplay muted loop>
+            <source src="video/pexels-cottonbro-9694804.mp4" type="video/mp4">
+        </video> -->
+
         <div class="home__container _container">
             <div class="home__body">
                 <h1>
-                    <span>When style meets</span>
-                    <span>convenience</span>
+                    <span data-x-right data-animate data-delay="0.2">When style meets</span>
+                    <span data-x-left data-animate data-delay="0.2">convenience</span>
                 </h1>
-                <div class="scene">
+                <div class="scene" data-opacity-only data-animate>
                     <div class="scene-wrapper">
                         <div class="scene-image">
                             <div class="scene-image__wrapper left">
@@ -33,7 +37,7 @@
                 </div>
             </div>
         </div>
-        <div class="_ticker">
+        <div class="_ticker" data-opacity-only data-animate data-delay="0.5">
             <div class="_ticker-text">
                 <span>Eco-Friendly Materials</span>
                 +
@@ -67,9 +71,7 @@
         </div>
     </section>
 
-  
-
-    <section class="about">
+    <section class="about" data-y-bottom data-animate>
         <div class="about__container _container">
             <div class="about__body">
                 <label class="_small-title ">/About</label>
@@ -98,11 +100,11 @@
     <section class="shirts">
         <div class="shirts__container _container">
             <div class="shirts__body">
-                <label class="_small-title ">/T-Shirts</label>
-                <h2>summer collection</h2>
+                <label data-x-left data-animate class="_small-title ">/T-Shirts</label>
+                <h2 data-x-right data-animate>summer collection</h2>
 
                 <div class="shirts__row">
-                    <article class="product">
+                    <article class="product" data-y-bottom data-animate>
                         <a href="single-product.html" class="product__top">
                             <ol class="product__sizes">
                                 <li>XS</li>
@@ -125,7 +127,7 @@
                             </a>
                         </div>
                     </article>
-                    <article class="product">
+                    <article class="product" data-y-bottom data-animate data-delay="0.1">
                         <a href="single-product.html" class="product__top">
                             <ol class="product__sizes">
                                 <li>XS</li>
@@ -148,7 +150,7 @@
                             </a>
                         </div>
                     </article>
-                    <article class="product">
+                    <article class="product" data-y-bottom data-animate data-delay="0.2">
                         <a href="single-product.html" class="product__top">
                             <ol class="product__sizes">
                                 <li>XS</li>
@@ -179,24 +181,24 @@
     <section class="advantages">
         <div class="advantages__container _container">
             <div class="advantages__body">
-                <label class="_small-title ">/advantages</label>
-                <h2>4 REASONS TO BUY CLOTHING
+                <label data-x-left data-animate class="_small-title ">/advantages</label>
+                <h2 data-x-right data-animate>4 REASONS TO BUY CLOTHING
                     IN OUR STORE</h2>
 
                 <ol>
-                    <li class="js-hover">
+                    <li class="js-hover" data-opacity-only data-animate data-delay="0">
                         <span>Odor-Neutralizing Technology</span>
                         <img src="img/best-1.png" alt="">
                     </li>
-                    <li class="js-hover">
+                    <li class="js-hover" data-opacity-only data-animate data-delay="0.1">
                         <span>Eco-Friendly Materials</span>
                         <img src="img/best-1.png" alt="">
                     </li>
-                    <li class="js-hover">
+                    <li class="js-hover" data-opacity-only data-animate data-delay="0.2">
                         <span>Stretch and flexibility</span>
                         <img src="img/best-1.png" alt="">
                     </li>
-                    <li class="js-hover">
+                    <li class="js-hover" data-opacity-only data-animate data-delay="0.3">
                         <span>Moisture-wicking properties</span>
                         <img src="img/best-1.png" alt="">
                     </li>
@@ -208,11 +210,11 @@
     <section class="collection" data-replace-width="768">
         <div class="collection__container _container">
             <div class="collection__body">
-                <label class="_small-title ">/T-Shirts</label>
-                <h2>urban adventure collection</h2>
+                <label data-x-left data-animate class="_small-title">/T-Shirts</label>
+                <h2 data-x-right data-animate>urban adventure collection</h2>
 
                 <div class="collection__content">
-                    <div class="collection__content-info">
+                    <div class="collection__content-info" data-opacity-only data-animate>
                         <p data-replace-new-position="afterend">As we navigate through the bustling city streets, we
                             understand the importance of fashionable
                             apparel. Introducing our
@@ -222,26 +224,26 @@
                             <span>shop now</span>
                         </a>
                     </div>
-                    <div class="_img-hover" data-replace-old-position="afterend">
+                    <div class="_img-hover" data-replace-old-position="afterend" data-x-right data-animate>
                         <img data-replace-element src="img/white-3.png" alt="">
                     </div>
                 </div>
                 <div class="collection__smallimg">
-                    <img src="img/white-1.png" alt="">
-                    <img src="img/white-2.png" alt="">
+                    <img src="img/white-1.png" alt="" data-x-left data-animate data-delay="0.2">
+                    <img src="img/white-2.png" alt="" data-x-left data-animate>
                 </div>
             </div>
         </div>
     </section>
 
-    <section class="bestsellers">
+    <section class="bestsellers" >
         <div class="bestsellers__container _container">
             <div class="bestsellers__body">
-                <label class="_small-title ">/Windbreakers</label>
-                <h2>BESTSELLERS</h2>
+                <label data-x-left data-animate class="_small-title ">/Windbreakers</label>
+                <h2 data-x-right data-animate>BESTSELLERS</h2>
 
                 <div class="gallery-scroll gallery-scroll-horizontal" data-speed="0.02">
-                    <div class="gallery-scroll__body">
+                    <div class="gallery-scroll__body" data-opacity-only data-animate>
                         <a href="single-product.html" class="gallery-scroll__item">
                             <img src="img/best-1.png" alt="">
                         </a>
@@ -275,7 +277,7 @@
                     </div>
                 </div>
 
-                <div class="_ticker">
+                <div class="_ticker" data-opacity-only data-animate>
                     <div class="_ticker-text">
                         <span>new collection</span>
                         <span>new collection</span>
@@ -294,35 +296,35 @@
     <section class="shop">
         <div class="shop__container _container">
             <div class="shop__body">
-                <label class="_small-title">/shop</label>
-                <h2>DISCOVER YOUR ADVENTURE WITH OUR
+                <label data-x-left data-animate class="_small-title">/shop</label>
+                <h2 data-x-right data-animate>DISCOVER YOUR ADVENTURE WITH OUR
                     URBAN EXPLORER COLLECTIONS</h2>
                 <ol>
-                    <li class="js-hover">
+                    <li class="js-hover" data-y-bottom data-animate>
                         <a href="catalog.html">
                             <span>new arrivals</span>
                             <img src="img/white-1.png" alt="">
                         </a>
                     </li>
-                    <li class="js-hover">
+                    <li class="js-hover" data-y-bottom data-animate data-delay="0.1">
                         <a href="catalog.html">
                             <span>Hoodies</span>
                             <img src="img/hoodie-2.png" alt="">
                         </a>
                     </li>
-                    <li class="js-hover">
+                    <li class="js-hover" data-y-bottom data-animate data-delay="0.2">
                         <a href="catalog.html">
                             <span>Windbreakers</span>
                             <img src="img/best-2.png" alt="">
                         </a>
                     </li>
-                    <li class="js-hover">
+                    <li class="js-hover" data-y-bottom data-animate data-delay="0.25">
                         <a href="catalog.html">
                             <span>T-Shirts</span>
                             <img src="img/t-shirt-3.png" alt="">
                         </a>
                     </li>
-                    <li class="js-hover">
+                    <li class="js-hover" data-y-bottom data-animate data-delay="0.3">
                         <a href="catalog.html">
                             <span>view all</span>
                         </a>
@@ -335,10 +337,10 @@
     <section class="terrain">
         <div class="terrain__container _container">
             <div class="terrain__body">
-                <div class="terrain__bigimg">
+                <div class="terrain__bigimg" data-x-left data-animate>
                     <img src="img/ALL-TERRAIN-big.png" alt="">
                 </div>
-                <div class="terrain__info">
+                <div class="terrain__info" data-x-right data-animate>
                     <div class="terrain__content">
                         <h3>ALL-TERRAIN EXPLORER OUTERWEAR</h3>
                         <p>As we venture into the great outdoors right here on our own planet, we understand the
@@ -361,10 +363,10 @@
     <section class="hoodies">
         <div class="hoodies__container _container">
             <div class="hoodies__body">
-                <label class="_small-title ">/Hoodies</label>
-                <h2>5 new items this week</h2>
+                <label data-x-left data-animate class="_small-title">/Hoodies</label>
+                <h2 data-x-right data-animate>5 new items this week</h2>
                 <div class="hoodies__grid">
-                    <article class="product">
+                    <article class="product" data-opacity-only data-animate>
                         <a href="single-product.html" class="product__top">
                             <ol class="product__sizes">
                                 <li>XS</li>
@@ -387,7 +389,7 @@
                             </a>
                         </div>
                     </article>
-                    <article class="product">
+                    <article class="product" data-opacity-only data-animate data-delay="0.1">
                         <a href="single-product.html" class="product__top">
                             <ol class="product__sizes">
                                 <li>XS</li>
@@ -410,7 +412,7 @@
                             </a>
                         </div>
                     </article>
-                    <article class="product">
+                    <article class="product" data-opacity-only data-animate data-delay="0.15">
                         <a href="single-product.html" class="product__top">
                             <ol class="product__sizes">
                                 <li>XS</li>
@@ -433,7 +435,7 @@
                             </a>
                         </div>
                     </article>
-                    <article class="product">
+                    <article class="product" data-opacity-only data-animate data-delay="0.2">
                         <a href="single-product.html" class="product__top">
                             <ol class="product__sizes">
                                 <li>XS</li>
@@ -456,7 +458,7 @@
                             </a>
                         </div>
                     </article>
-                    <article class="product">
+                    <article class="product" data-opacity-only data-animate data-delay="0.25">
                         <a href="single-product.html" class="product__top">
                             <ol class="product__sizes">
                                 <li>XS</li>
@@ -489,9 +491,9 @@
         <div class="big__container _container">
             <div class="big__body">
                 <div class="big__content">
-                    <p>T-Shirt Collection
+                    <p data-y-bottom data-animate>T-Shirt Collection
                         High-Quality Fabrics and Fits</p>
-                    <a href="catalog.html" class="_shop-btn">
+                    <a data-y-bottom data-animate data-delay="0.1" href="catalog.html" class="_shop-btn">
                         <span>shop now</span></a>
                 </div>
             </div>
@@ -501,11 +503,11 @@
     <section class="trends">
         <div class="trends__container _container">
             <div class="trends__body">
-                <label class="_small-title ">/Trends</label>
-                <h2>LATEST IN TRENDS</h2>
+                <label data-x-left data-animate class="_small-title ">/Trends</label>
+                <h2 data-x-right data-animate>LATEST IN TRENDS</h2>
 
                 <div class="trends__grid">
-                    <article class="trend">
+                    <article class="trend" data-x-left data-animate>
                         <a href="single.html" class="trend-img">
                             <img src="img/trends-1.png" alt="">
                         </a>
@@ -524,7 +526,7 @@
                             </div>
                         </div>
                     </article>
-                    <article class="trend">
+                    <article class="trend" data-x-right data-animate data-delay="0.1">
                         <a href="single.html" class="trend-img">
                             <img src="img/trends-2.png" alt="">
                         </a>
@@ -541,7 +543,7 @@
                             </div>
                         </div>
                     </article>
-                    <article class="trend">
+                    <article class="trend" data-x-right data-animate data-delay="0.2">
                         <a href="single.html" class="trend-img">
                             <img src="img/trends-3.png" alt="">
                         </a>
@@ -558,7 +560,7 @@
                             </div>
                         </div>
                     </article>
-                    <article class="trend">
+                    <article class="trend" data-x-right data-animate data-delay="0.25">
                         <a href="single.html" class="trend-img">
                             <img src="img/trends-4.png" alt="">
                         </a>
