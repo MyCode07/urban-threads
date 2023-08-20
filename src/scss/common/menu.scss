@@ -94,9 +94,9 @@
         }
     }
 
-    // .menu__acc
+    // .menu__account
 
-    &__acc {
+    &__account {
         background-color: #fff;
         padding: 10px 10px;
         display: flex;
@@ -106,31 +106,20 @@
         @include adaptive-value("margin-top", 50, 25, 1);
         width: 100%;
 
-        button {
-            display: flex;
-            align-items: center;
+        * {
+            pointer-events: none;
+        }
+
+        div {
             color: #100c08;
             font-size: 14px;
-            font-style: normal;
             font-weight: 500;
-            line-height: normal;
             letter-spacing: 0.6px;
-            text-transform: initial;
             margin-top: 5px;
+            white-space: nowrap;
 
-            span {
-                display: block;
+            .slash {
                 margin: 0 5px;
-            }
-
-            a {
-                white-space: nowrap;
-
-                @media (any-hover: hover) {
-                    &:hover {
-                        text-decoration: underline;
-                    }
-                }
             }
         }
     }

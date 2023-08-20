@@ -1,44 +1,6 @@
 import { isMobile } from "./isMobile.js";
 import { lockPadding, unLockPadding } from "./popup.js";
 
-const acc = document.querySelector('.popup-account');
-const accOpenButton = document.querySelector('.header__account');
-const accCloseButton = document.querySelector('.popup-account__close');
-
-
-if (accOpenButton)
-    accOpenButton.addEventListener('click', function (e) {
-        e.preventDefault();
-
-        acc.classList.add('_open');
-        document.body.classList.add('_noscroll');
-
-        if (!isMobile.any()) {
-            lockPadding()
-        }
-    })
-
-if (accCloseButton) {
-    accCloseButton.addEventListener('click', function () {
-        acc.classList.remove('_open');
-        document.body.classList.remove('_noscroll');
-
-        if (!isMobile.any()) {
-            unLockPadding()
-        }
-    })
-
-    acc.addEventListener('click', function (e) {
-        if (e.target.classList.contains('_open')) {
-            acc.classList.remove('_open')
-            document.body.classList.remove('_noscroll');
-            unLockPadding()
-        }
-    })
-}
-
-
-
 const searchBtn = document.querySelector('.header__search');
 const searchForm = document.querySelector('.header__search-form');
 const searchFormClsoe = document.querySelector('.header__search-close');
@@ -54,6 +16,9 @@ if (searchFormClsoe)
         searchForm.classList.remove('_active')
     })
 
+
+const accountPopup = document.querySelector('.popup-account');
+
 document.addEventListener('click', function (e) {
     let targetEl = e.target;
     if (targetEl.classList.contains('add-to-cart')) {
@@ -63,5 +28,25 @@ document.addEventListener('click', function (e) {
         const outputCount = document.querySelector('.header__cart .count')
         outputCount.dataset.count++;
         outputCount.textContent = outputCount.dataset.count;
+    }
+
+
+    if (targetEl.classList.contains('open-account')) {
+        e.preventDefault();
+        accountPopup.classList.add('_open');
+        document.body.classList.add('_noscroll');
+
+        if (!isMobile.any()) {
+            lockPadding()
+        }
+    }
+
+    if (targetEl.classList.contains('popup-account__close') || targetEl.classList.contains('popup-account')) {
+        accountPopup.classList.remove('_open');
+        document.body.classList.remove('_noscroll');
+
+        if (!isMobile.any()) {
+            unLockPadding()
+        }
     }
 })

@@ -104,6 +104,7 @@
         @media (max-width: 1024px) {
             min-width: 0;
             @include adaptive-value("width", 400, 280, 1);
+            flex: 0 0 auto;
         }
 
         img {

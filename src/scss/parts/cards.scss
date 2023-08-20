@@ -90,29 +90,30 @@
 }
 
 .add-to-cart {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 10px;
-    background-color: #fff;
+    &:not(._shop-btn) {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 10px;
+        background-color: #fff;
 
-    @media (any-hover: hover) {
-        &:hover {
-            svg {
-                transform: scale(1.2);
+        @media (any-hover: hover) {
+            &:hover {
+                svg {
+                    transform: scale(1.2);
+                }
             }
         }
-    }
 
-    @media (max-width: 1024px) {
-        padding: 5px;
-    }
+        @media (max-width: 1024px) {
+            padding: 5px;
+        }
 
-    svg {
-        transition: all 0.3s ease 0s;
-
-        @include adaptive-value("width", 17, 10, 1);
-        @include adaptive-value("height", 16, 10, 1);
+        svg {
+            transition: all 0.3s ease 0s;
+            @include adaptive-value("width", 17, 10, 1);
+            @include adaptive-value("height", 16, 10, 1);
+        }
     }
 }
 
@@ -203,7 +204,6 @@
         line-height: 1;
         margin-bottom: 15px;
         transition: all 0.3s ease 0s;
-        
 
         @media (any-hover: hover) {
             &:hover {

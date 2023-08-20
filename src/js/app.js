@@ -10,6 +10,7 @@ import './utils/filters.js';
 import './utils/advantages.js';
 import './utils/header-actions.js';
 import './utils/animations.js';
+import './utils/notice.js';
 
 // import './utils/popup.js';
 

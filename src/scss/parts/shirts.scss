@@ -29,6 +29,12 @@
             }
         }
 
+        & > :nth-child(4) {
+            @media (min-width: 769px) {
+                display: none;
+            }
+        }
+
         @media (max-width: 768px) {
             display: grid;
             grid-template-columns: repeat(2, 1fr);
@@ -36,5 +42,3 @@
         }
     }
 }
-
- 
